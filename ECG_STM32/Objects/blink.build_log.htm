@@ -1,0 +1,87 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: ahmed dakrory, dakrory, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.30.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.42.0.0
+ 
+<h2>Project:</h2>
+C:\Users\AhmedDakrory\Desktop\Keil\blink.uvprojx
+Project File Date:  05/12/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32l432xx.s...
+compiling system_stm32l4xx.c...
+mainFile.c(273): warning: call to function without interrupt attribute could clobber interruptee's VFP registers [-Wextra]
+    fifoPut(&usart1In, USART1->RDR);
+    ^
+mainFile.c(279): warning: call to function without interrupt attribute could clobber interruptee's VFP registers [-Wextra]
+    if (!fifoIsEmpty(&usart1Out))
+         ^
+mainFile.c(281): warning: call to function without interrupt attribute could clobber interruptee's VFP registers [-Wextra]
+      USART1->TDR = fifoTake(&usart1Out);
+                    ^
+mainFile.c(300): warning: call to function without interrupt attribute could clobber interruptee's VFP registers [-Wextra]
+    fifoPut(&usart2In, (int)(USART2->RDR & 0xFF));
+    ^
+mainFile.c(309): warning: call to function without interrupt attribute could clobber interruptee's VFP registers [-Wextra]
+    if (!fifoIsEmpty(&usart2Out))
+         ^
+mainFile.c(311): warning: call to function without interrupt attribute could clobber interruptee's VFP registers [-Wextra]
+      USART2->TDR = fifoTake(&usart2Out);
+                    ^
+6 warnings generated.
+compiling mainFile.c...
+linking...
+Program Size: Code=3552 RO-data=396 RW-data=16 ZI-data=2584  
+".\Objects\blink.axf" - 0 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32L4xx_DFP.2.3.0.pack
+                Keil.STM32L4xx_DFP.2.3.0
+                STMicroelectronics STM32L4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.3.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\AhmedDakrory\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\AhmedDakrory\AppData\Local\Arm\Packs\Keil\STM32L4xx_DFP\2.3.0\Drivers\CMSIS\Device\ST\STM32L4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:1.3.1
+      Include file:  Drivers\CMSIS\Device\ST\STM32L4xx\Include\stm32l4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32L4xx\Source\Templates\arm\startup_stm32l432xx.s
+      Source file:   MDK\Device\Source\ARM\STM32L4xx_SB_OPT.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32L4xx\Source\Templates\system_stm32l4xx.c
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
